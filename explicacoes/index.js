@@ -1,11 +1,178 @@
-//  o window onload serve para carregur o html antes do js 
+// //  o window onload serve para carregur o html antes do js 
 
-window.onload = function(){
+// window.onload = function(){
 
-    var objBotao = document.getElementById("botao");
+//     var objBotao = document.getElementById("botao");
     
-    objBotao.onclick = function () 
+//     objBotao.onclick = function () 
+//     {
+//         window.alert('Alô Mundo');
+//     }
+// // ---------------------------------------------------------
+// // exemplos de variaveis
+// // typeof ver o tipo da variavel
+
+// // exemplo de variavel indefinida
+
+//     var vIndefinida;
+//     console.log(typeof vIndefinida);
+
+// // exemplo de booleano, verdadeiro ou falso
+//     var vBooleano = true;
+//     console.log(typeof vBooleano);
+
+// // exemplo de alfanumerico(string)
+//     var vAlfaNum = "Que dia chuvoso.";
+//     console.log(typeof vAlfaNum);
+
+// // exemplo de numerios
+//     var vNumeroInteiro = -159;
+//     console.log(typeof vNumeroInteiro);
+// // devisse usar o ponto ao indez do virgula
+//     var vNumFracionado =2434.983;
+//     console.log(typeof vNumFracionado);
+
+// // Exemplo de array
+//     var vArrayNums = [10,75,86,344];
+//     console.log(typeof vArrayNums);
+
+// // Exemplo de objeto 
+//     var vAluna = {name:'Evely',age:22};
+//     console.log(typeof vAluna);
+
+// // ------------------------------------------------------------
+// // Operadores matematicos
+
+//     console.log("Adição 4+4: ");
+//     console.log(4+4);
+
+//     console.log("Subtração 4-2: ");
+//     console.log(4-2);
+
+//     console.log("Multi 4*4: ");
+//     console.log(4*4);
+
+//     console.log("Divião 4/4: ");
+//     console.log(4/4);
+
+//     console.log("Resto da divisão de 10 por 3: ");
+//     console.log(10%3);
+
+// // Com operações mais complexas
+
+//     var num =5;
+
+//     console.log("Valor de num: "+num);
+
+//     num =Math.pow(5,2);
+//     console.log("Valor de num(elevado ao exponente 2): "+num);
+
+//     num = num - Math.random();
+//     console.log("Valor de num (expoente subitraido por um numero aleatorio): "+num);
+
+//     num = num - Math.PI;
+//     console.log("Valor de num(valor anterior multiplicado por PI): "+num);
+
+// }
+// -------------------------------------------------------------------------------
+// Estruturas Condicionais
+
+// window.onload = function() {
+//     var objTxtNota = document.getElementById("nota");
+//     var objDivResultado = document.getElementById("resultado");
+//     var objBotaoC = document.getElementById("botaoC");
+
+//     objBotaoC.onclick = function()
+//     {
+//         // parseFloat transforma o valor digitado em nota no html em numero fracionado.
+//         var objFloNota = parseFloat(objTxtNota.value);
+//         if (objFloNota >= 6.0)
+//         // esse é o bloco verdade! se for ...faça!
+//         {
+//             objDivResultado.innerHTML = "Aluno(a) aprovado(a).";
+//             console.log("Aluno(a) aprovado com nota "+objFloNota);
+//         }
+//         // esse é o bloco de falso/senão... faça!  = se a nota entrar nesse bloco, significa que é menor que 6.
+//         else
+//         {
+//             objDivResultado.innerHTML = "Aluno(a) reprovado(a).";
+//             console.log("Aluno(a) reprovado(a) com nota "+objFloNota);
+//         }
+
+//         // condicional alinhada(if dentro de if)
+
+//         if (objFloNota >= 6.0)
+//         // esse é o bloco verdade! se for ...faça!
+//         {
+//             objDivResultado.innerHTML = "Aluno(a) aprovado(a).";
+//             console.log("Aluno(a) aprovado com nota "+objFloNota);
+//         }
+//         // esse é o bloco de falso/senão... faça!  = se a nota entrar nesse bloco, significa que é menor que 6.
+//         else
+//         {
+//             if (objFloNota >=4.0)
+//             {
+//                 objDivResultado.innerHTML = "Aluno(a) em exame.";
+//                 console.log("Aluno(a) em exame.");
+//             }
+//             else 
+//             {
+//                 objDivResultado.innerHTML = "Aluno(a) reprovado(a).";
+//                 console.log("Aluno(a) reprovado(a) com nota "+objFloNota);
+//             }
+//         }
+//     }
+
+// }
+
+// --------------------------------------------------------
+
+// Condicional Case 
+
+window.onload = function() 
+{
+    var objTexSigla = document.getElementById("sigla");
+    var objDivResultado = document.getElementById("resultado");
+    var objBotaoD = document.getElementById("botaoD");
+
+    objBotaoD.onclick = function()
     {
-        window.alert('Alô Mundo');
+        switch(objTexSigla.value)
+        {
+            case "AL":
+                objDivResultado.innerHTML = "Alagoas";
+                console.log("Alagoas");
+            break;
+            case "BA":
+                objDivResultado.innerHTML = "Bahia";
+                console.log("Bahia");
+                break;
+            case "CE":
+                objDivResultado.innerHTML = "Ceará";
+            break;
+            case "MA":
+                objDivResultado.innerHTML = "Maranhão";
+            break;
+            case "PB":
+                objDivResultado.innerHTML = "Paraiba";
+                break;
+            case "PE":
+                objDivResultado.innerHTML = "Pernambuco";
+                console.log("Pernambuco");
+            break;
+            case "PI":
+                objDivResultado.innerHTML = "Piauí";
+            break;
+            case "RN":
+                objDivResultado.innerHTML = "Rio Grande do Norte";
+                break;
+            case "SE":
+                objDivResultado.innerHTML = "Sergipe";
+            break;
+            default:
+                objDivResultado.innerHTML = "Não é um estado da Região Nordeste."
+                console.log("Não é um estado da Região Nordeste.");
+
+        }
     }
 }
