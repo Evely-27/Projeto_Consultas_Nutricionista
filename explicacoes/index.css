@@ -72,3 +72,10 @@ a:hover {
     font-size: 25px;
     padding-top: 6px;
 }
+/* ------------------ajax------------------------- */
+.listAjax {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000;
+        font-size: 25px;
+        margin: 5px;
+}
