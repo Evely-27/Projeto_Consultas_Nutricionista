@@ -24,7 +24,18 @@ class ConsultaController {
         );
         console.log(consulta);
 
+        let helper = new DateHelper();
+        let consultaHelper = new Consulta(
+            this._inputNome.value,
+            helper.textoParaData(this._inputData.value),
+            this._inputPeso.value,
+            this._inputAltura.value
+        );
+        console.log(helper.dataParaTexto(consultaHelper.data));
     }
+
+
+}
 
 //atribuindo por meio do First Class Functions
 
@@ -38,7 +49,6 @@ class ConsultaController {
         // console.log(inputData.value);
         // console.log(inputPeso.value);
         // console.log(inputAltura.value);
-}
 
 // var inputNome = document.querySelector('#nome');
         // var inputData = document.querySelector('#data');
