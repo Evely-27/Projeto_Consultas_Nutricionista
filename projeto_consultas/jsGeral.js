@@ -39,3 +39,20 @@
         this.reset();
         campos[0].focus();
     });
+
+// exemplo de instancia com constructor sem parametros
+    // var consulta = new Consulta();
+    // consulta.nome = 'Nathan Dallas';
+    // consulta.data = new Date('2022-07-11');
+    // consulta.peso = 59;
+    // consulta.altura = 1.98;
+    // console.log(consulta);
+
+
+    // exemplo de instancia com constructor com parametros
+    var consulta = new Consulta(
+        'Maria Julin',
+        new Date('2020-06-27'),
+        43,1.59
+    );
+    console.log(consulta);
