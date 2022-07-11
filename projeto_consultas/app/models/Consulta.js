@@ -1,8 +1,7 @@
 class Consulta {
     constructor(nome, data, peso, altura) {
         this._nome = nome
-        //ele recebe o valor do metodo getTime, assim, seui valor muda do armazenado pelo usuario
-        this._data = new Date(data.getTime());
+        this._data = new Date(data.getTime()); //ele recebe o valor do metodo getTime, assim, seui valor muda do armazenado pelo usuario
         this._peso = peso;
         this._altura = altura;
         Object.freeze(this);

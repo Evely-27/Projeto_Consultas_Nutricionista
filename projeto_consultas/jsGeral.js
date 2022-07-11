@@ -68,9 +68,11 @@
 
     // confirmando encapsulamento
 // peso =  confirmado
-    consulta.peso = 69;
-    console.log(consulta.peso);
-    consulta._peso = 78;
-    console.log(consulta.peso);
+    // consulta.peso = 69;
+    // console.log(consulta.peso);
+    // consulta._peso = 78;
+    // console.log(consulta.peso);
+//--------------------------------
 
+        let consultaController = new ConsultaController();
 

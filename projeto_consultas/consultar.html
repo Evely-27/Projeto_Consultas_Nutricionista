@@ -50,7 +50,7 @@
         <section>
             <div class="caixa-form">
                 <h3 class="titulo">Cadastrar Consultas</h3>
-                <form>
+                <form onsubmit="consultaController.adiciona(event)">
                     <label for="nome">Nome do Paciente:</label>
                     <input type="text" id="nome" name="nome" placeholder="ex: Abel Dentos"
                     />
@@ -80,6 +80,7 @@
             </div>
         </section>
         <script src="/app/models/Consulta.js"></script>
+        <script src="/app/controllers/ConsultaController.js"></script>
         <script src="/jsGeral.js"></script>
     </body>
     </html>
