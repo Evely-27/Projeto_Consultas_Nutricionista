@@ -55,4 +55,22 @@
         new Date('2020-06-27'),
         43,1.59
     );
-    console.log(consulta);
+
+    // data 
+    // console.log(consulta.data);
+    // consulta.data.setDate(19);
+    // console.log(consulta.data);
+
+    // verificando classe Consulta
+    // console.log(consulta);
+    // console.log(consulta.getIMC);
+    // console.log(consulta.imc); // ao inves de usar consulta.getIMC, ele permite ir direto ao valor da propriedade
+
+    // confirmando encapsulamento
+// peso =  confirmado
+    consulta.peso = 69;
+    console.log(consulta.peso);
+    consulta._peso = 78;
+    console.log(consulta.peso);
+
+
