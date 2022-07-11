@@ -32,6 +32,17 @@ class ConsultaController {
             this._inputAltura.value
         );
         console.log(helper.dataParaTexto(consultaHelper.data));
+
+        // testando dataHeçper com função static
+
+        
+        let consultaStatic = new Consulta(
+            this._inputNome.value,
+            DateHelper.textoParaData(this._inputData.value),
+            this._inputPeso.value,
+            this._inputAltura.value,
+        );
+        console.log(consultaStatic.data);
     }
 
 
