@@ -4,8 +4,8 @@ class DateHelper {
     }
 
      static textoParaData(texto) {                                 // método de conversão de texto para data 
-        if(!/^d{4}-d{2}-d{2}$/.test(texto))
-            throw new Error('O formato  correto é yyyy-mm-dd');
+        // if(!/^d{4}-d{2}-d{2}$/.test(texto))
+            // throw new Error('O formato  correto é yyyy-mm-dd');
         return new Date(...
             texto 
             .split('-')
