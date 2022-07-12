@@ -9,12 +9,17 @@ class ConsultaController {
         this._listaConsultas = new ListaConsultas(); // adicionando proprioedade ListaConsultas para guardar as consultas exibidas
 
         this._consultasView = new ConsultasView($('#consultasView')); // vinculando à classe ConsultasView- lida com ma responsabilidade de mostrar a tabela. // o #consultasView é a div que estamos mandando para a classe para redenrizar nela.
-        this._consultasView.update(this._listaConsultas); // estamos atualizando a classe ConsultasView
+        this._consultasView.update(this._listaConsultas); // estamos atualizando a classe ConsultasView, e evniando as listaConsulta para ele = model
+        this._mensagem = new Mensagem();
+        this._mensagemView = new MensagemView($('#mensagemView'));
 
     }
+    // ocorre ao submeter o formulario
     adiciona(evento) {
         evento.preventDefault();
         this._listaConsultas.adiciona(this._criaConsulta());
+        this._mensagem.texto = 'Consulta adicionada com sucesso :)';
+        this._mensagemView.update(this._mensagem);
         this._consultasView.update(this._listaConsultas);
         this._limpaFormulario();
         // alert('Ação executada com sucesso.');
