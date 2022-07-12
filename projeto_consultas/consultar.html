@@ -12,7 +12,7 @@
     <!-- Cabeçalho da página -->
         <header >
             <h1>Nutricionista Esportiva</h1>
-            <span> Teste- Nutricionista</span>
+            <!-- <span> Teste- Nutricionista</span> -->
         </header>
         <!-- Lista de consultas da página -->
         <section class="consultas">
@@ -38,12 +38,12 @@
                         </div>
                         <div class="peso">
                             <label for="peso">Peso (kg):</label>   
-                            <input type="number" id="peso" name="peso" placeholder="ex: 94.4"
+                            <input type="text" id="peso" name="peso" placeholder="ex: 94.4"
                             />  
                         </div>
                         <div class="altura">
                             <label for="altura">Altura (m):</label>   
-                            <input type="number" id="altura" name="altura" placeholder="ex: 1.87"
+                            <input type="text" id="altura" name="altura" placeholder="ex: 1.87"
                             />  
                         </div>
                     </div>
@@ -56,11 +56,12 @@
             </div>
         </section>
         <script src="/app/models/Consulta.js"></script>
-        <script src="/app/views/MensagemView.js"></script>
-        <script src="/app/models/Mensagem.js"></script>
-        <script src="/app/views/ConsultasView.js"></script>
         <script src="/app/models/ListaConsultas.js"></script>
+        <script src="/app/models/Mensagem.js"></script>
         <script src="/app/helpers/DateHelper.js"></script>
+        <script src="/app/views/View.js"></script>
+        <script src="/app/views/ConsultasView.js"></script>
+        <script src="/app/views/MensagemView.js"></script>
         <script src="/app/controllers/ConsultaController.js"></script>
         <script src="/jsGeral.js"></script>
     </body>
