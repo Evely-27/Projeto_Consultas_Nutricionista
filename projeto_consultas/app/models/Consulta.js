@@ -45,6 +45,6 @@ class Consulta {
     }
 
     get altura() {
-        return this.altura;
+        return this._altura;
     }
 }

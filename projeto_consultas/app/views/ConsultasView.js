@@ -12,11 +12,11 @@ class ConsultasView {
           <table class="table table-bordered">
           <thead class="thead-dark">
               <tr>
-                  <th scope="col">Nome</th>
-                  <th scope="col">Data da Consulta</th>
-                  <th scope="col">Peso (kg)</th>
-                  <th scope="col">Altura (m)</th>
-                  <th scope="col">IMC</th>
+                  <th class="cab_cons">Nome</th>
+                  <th class="cab_cons">Data da Consulta</th>
+                  <th class="cab_cons">Peso (kg)</th>
+                  <th class="cab_cons">Altura (m)</th>
+                  <th class="cab_cons">IMC</th>
               </tr>
           </thead>
           <tbody>

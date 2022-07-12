@@ -7,8 +7,9 @@ class ConsultaController {
         this._inputPeso = $('#peso');
         this._inputAltura = $('#altura');
         this._listaConsultas = new ListaConsultas(); // adicionando proprioedade ListaConsultas para guardar as consultas exibidas
+
         this._consultasView = new ConsultasView($('#consultasView')); // vinculando à classe ConsultasView- lida com ma responsabilidade de mostrar a tabela. // o #consultasView é a div que estamos mandando para a classe para redenrizar nela.
-        this._consultasView.update(); // estamos atualizando a classe ConsultasView
+        this._consultasView.update(this._listaConsultas); // estamos atualizando a classe ConsultasView
 
     }
     adiciona(evento) {
@@ -24,6 +25,7 @@ class ConsultaController {
         //     this._inputAltura.value,
         // );
         // console.log(consultaFinal);
+
 
 
 
