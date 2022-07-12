@@ -13,14 +13,17 @@ class ConsultaController {
     }
     adiciona(evento) {
         evento.preventDefault();
+        this._listaConsultas.adiciona(this._criaConsulta());
+        this._consultasView.update(this._listaConsultas);
+        this._limpaFormulario();
         // alert('Ação executada com sucesso.');
-        let consultaFinal = new Consulta(
-            this._inputNome.value,
-            DateHelper.textoParaData(this._inputData.value),
-            this._inputPeso.value,
-            this._inputAltura.value,
-        );
-        console.log(consultaFinal);
+        // let consultaFinal = new Consulta(
+        //     this._inputNome.value,
+        //     DateHelper.textoParaData(this._inputData.value),
+        //     this._inputPeso.value,
+        //     this._inputAltura.value,
+        // );
+        // console.log(consultaFinal);
 
 
 
