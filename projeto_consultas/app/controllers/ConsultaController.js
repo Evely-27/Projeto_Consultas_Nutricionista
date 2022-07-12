@@ -6,11 +6,14 @@ class ConsultaController {
         this._inputData = $('#data');
         this._inputPeso = $('#peso');
         this._inputAltura = $('#altura');
+        this._listaConsultas = new ListaConsultas(); // adicionando proprioedade ListaConsultas para guardar as consultas exibidas
+        this._consultasView = new ConsultasView($('#consultasView')); // vinculando à classe ConsultasView- lida com ma responsabilidade de mostrar a tabela. // o #consultasView é a div que estamos mandando para a classe para redenrizar nela.
+        this._consultasView.update(); // estamos atualizando a classe ConsultasView
 
     }
     adiciona(evento) {
         evento.preventDefault();
-        alert('Ação executada com sucesso.');
+        // alert('Ação executada com sucesso.');
         let consultaFinal = new Consulta(
             this._inputNome.value,
             DateHelper.textoParaData(this._inputData.value),
@@ -56,7 +59,23 @@ class ConsultaController {
         // console.log(consultaStatic.data);
     }
 
+    _criaConsulta() {
+        return new Consulta(
+            this._inputNome.value,
+            DateHelper.textoParaData(this._inputData.value),
+            this._inputPeso.value,
+            this._inputAltura.value
+        );
+    }
 
+    _limpaFormulario() {
+        this._inputNome.value = "";
+        this._inputData.value = "";
+        this._inputPeso.value = "";
+        this._inputAltura.value = "";
+
+        this._inputNome.focus();
+    }
 }
 
 //atribuindo por meio do First Class Functions

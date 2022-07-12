@@ -18,33 +18,8 @@
         <section class="consultas">
             <h2 class="titulo">Consultas Realizadas</h2>
             <div class="consultas-conteudo">
-                <table id="table-consultar">
-                    <thead>
-                        <tr>
-                            <th class="cab_cons">Nome</th>
-                            <th class="cab_cons">Data da Consulta</th>
-                            <th class="cab_cons">Peso (kg)</th>
-                            <th class="cab_cons">Altura (m)</th>
-                            <th class="cab_cons">IMC</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- <tr id="tr-consultar">
-                            <td class="item">Lucas Ferreira</ttdr>
-                            <td class="item">03/07/2022</td>
-                            <td class="item">55</ttdr>
-                            <td class="item">267</td>
-                            <td class="item">56</td>
-                        </tr>
-                        <tr>
-                            <td class="item">Maria Fernades</ttdr>
-                            <td class="item">05/07/2022</td>
-                            <td class="item">43</ttdr>
-                            <td class="item">234</td>
-                            <td class="item">76</td>
-                        </tr> -->
-                    </tbody>
-                </table>
+                <!-- retirando a tabela com dos dados da consulta e tranfereindo responsaboilidade para a classe ConsultasView -->
+               <div id="consultasView"></div> <!-- div para vincular com o codigo feito na tabela criada pela  classe ConsultasView -->
             </div>
         </section>
         <section>
@@ -80,6 +55,8 @@
             </div>
         </section>
         <script src="/app/models/Consulta.js"></script>
+        <script src="/app/views/ConsultasView.js"></script>
+        <script src="/app/models/ListaConsultas.js"></script>
         <script src="/app/helpers/DateHelper.js"></script>
         <script src="/app/controllers/ConsultaController.js"></script>
         <script src="/jsGeral.js"></script>
